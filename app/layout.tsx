@@ -1,32 +1,36 @@
+import React from 'react';
 import type { Metadata } from 'next';
 import { Poppins } from 'next/font/google';
-import './globals.css';
+
 import { ClerkProvider } from '@clerk/nextjs';
+
+import './globals.css';
 
 const poppins = Poppins({
   subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700'],
+  weight: ['400', '500', '600', '700'],
   variable: '--font-poppins',
 });
 
 export const metadata: Metadata = {
   title: 'Evently',
-  description:
-    'Evently is a platform for event management. That A Event Buying Website. ',
+  description: 'Evently is a platform for event management.',
   icons: {
-    icon: '/public/assets/icons/logo-grey.svg',
+    icon: '/assets/images/logo.svg',
   },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <ClerkProvider>
-      <html lang="en">
-        <body className={poppins.variable}>{children}</body>
+      <html lang="en " suppressHydrationWarning>
+        <body className={poppins.variable} suppressHydrationWarning={true}>
+          {children}
+        </body>
       </html>
     </ClerkProvider>
   );
