@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { Button } from '../ui/button';
 import NavItems from './NavItems';
 import MobileNav from './MobileNav';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 import { useEffect } from 'react';
 
 const Header = () => {
