@@ -1,8 +1,6 @@
-import React from 'react';
 import type { Metadata } from 'next';
 import { Poppins } from 'next/font/google';
-
-import { ClerkProvider, RedirectToSignIn } from '@clerk/nextjs';
+import { ClerkProvider } from '@clerk/nextjs';
 
 import './globals.css';
 
@@ -27,10 +25,8 @@ export default function RootLayout({
 }) {
   return (
     <ClerkProvider>
-      <html lang="en " suppressHydrationWarning>
-        <body className={poppins.variable} suppressHydrationWarning={true}>
-          {children}
-        </body>
+      <html lang="en">
+        <body className={poppins.variable}>{children}</body>
       </html>
     </ClerkProvider>
   );
