@@ -1,22 +1,12 @@
 'use client';
-import { SignedIn, SignedOut, UserButton, useUser } from '@clerk/nextjs';
+import { SignedIn, SignedOut, UserButton } from '@clerk/nextjs';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '../ui/button';
 import NavItems from './NavItems';
 import MobileNav from './MobileNav';
-import { useRouter } from 'next/navigation';
-import { useEffect } from 'react';
 
 const Header = () => {
-  const { user } = useUser();
-  const router = useRouter();
-
-  useEffect(() => {
-    if (user) {
-      router.replace('/');
-    }
-  }, [user, router]);
   return (
     <header className="w-full border-b">
       <div className="wrapper flex items-center justify-between">
