@@ -42,7 +42,7 @@ export const checkoutOrder = async (order: CheckoutOrderParams) => {
       success_url: `${process.env.NEXT_PUBLIC_SERVER_URL}/profile`,
       cancel_url: `${process.env.NEXT_PUBLIC_SERVER_URL}/`,
     });
-
+    // await createOrder(order);
     redirect(session.url!);
   } catch (error) {
     throw error;
@@ -52,13 +52,15 @@ export const checkoutOrder = async (order: CheckoutOrderParams) => {
 export const createOrder = async (order: CreateOrderParams) => {
   try {
     await connectToDatabase();
-
+    console.log(
+      'request to Create Order........................ Order Action  Page 56Line ',
+    );
     const newOrder = await Order.create({
       ...order,
       event: order.eventId,
       buyer: order.buyerId,
     });
-
+    console.log('newOrder...................................61', newOrder);
     return JSON.parse(JSON.stringify(newOrder));
   } catch (error) {
     handleError(error);
