@@ -30,14 +30,12 @@ const Checkout = ({ event, userId }: { event: IEvent; userId: string }) => {
       isFree: event.isFree,
       buyerId: userId,
     };
-    console.log(
-      'request to checkout Order........................ Checkout Page 33Line ',
-    );
+
     await checkoutOrder(order);
   };
 
   return (
-    <form action={onCheckout}>
+    <form action={onCheckout} method="post">
       <Button type="submit" role="link" size="lg" className="button sm:w-fit">
         {event.isFree ? 'Get Ticket' : 'Buy Ticket'}
       </Button>
