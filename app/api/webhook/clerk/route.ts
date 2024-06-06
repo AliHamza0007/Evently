@@ -68,7 +68,6 @@ export async function POST(req: Request) {
     };
 
     const newUser = await createUser(user);
-    console.log('newUser...................', newUser);
     if (newUser) {
       const result = await clerkClient.users.updateUserMetadata(
         newUser.clerkId,
@@ -79,9 +78,7 @@ export async function POST(req: Request) {
         },
       );
 
-      console.log('Metadata updated successfully:', result);
-
-      console.log('result..........................', result);
+      // console.log('Metadata updated successfully:', result);
     }
 
     return NextResponse.json({ message: 'OK', user: newUser });
