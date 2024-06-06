@@ -52,6 +52,7 @@ export async function POST(req: Request) {
   }
 
   // Get the ID and type
+  const { id } = evt.data;
   const eventType = evt.type;
 
   if (eventType === 'user.created') {
@@ -59,7 +60,6 @@ export async function POST(req: Request) {
       evt.data;
 
     const user = {
-      _id: id.substring(0, 16),
       clerkId: id,
       email: email_addresses[0].email_address,
       username: username!,
