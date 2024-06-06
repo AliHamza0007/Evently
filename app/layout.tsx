@@ -25,8 +25,10 @@ export default function RootLayout({
 }) {
   return (
     <ClerkProvider>
-      <html lang="en">
-        <body className={poppins.variable}>{children}</body>
+      <html lang="en" suppressHydrationWarning>
+        <body className={poppins.variable} suppressHydrationWarning={true}>
+          {children}
+        </body>
       </html>
     </ClerkProvider>
   );
