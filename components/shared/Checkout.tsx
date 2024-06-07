@@ -1,5 +1,5 @@
 import React, { MouseEvent } from 'react';
-import { loadStripe } from '@stripe/stripe-js';
+import { loadStripe, Stripe } from '@stripe/stripe-js';
 import { Button } from '../ui/button';
 import { checkoutOrder } from '@/lib/actions/order.actions';
 
@@ -10,6 +10,13 @@ const stripePromise = loadStripe(
 const Checkout = ({ event, userId }: { event: any; userId: string }) => {
   const onCheckout = async (e: MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
+
+    const stripe = await stripePromise;
+    if (!stripe) {
+      console.error('Failed to load Stripe.');
+      return;
+    }
+
     const order = {
       eventTitle: event.title,
       eventId: event._id,
@@ -18,7 +25,40 @@ const Checkout = ({ event, userId }: { event: any; userId: string }) => {
       buyerId: userId,
     };
 
-    await checkoutOrder(order);
+    try {
+      // Call your action to checkout order
+      await checkoutOrder(order);
+
+      // Create a checkout session on the server
+      const response = await fetch('/api/checkout', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          eventId: event._id,
+          userId,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to create checkout session');
+      }
+
+      const session = await response.json();
+
+      // Redirect to Stripe Checkout
+      const { error } = await stripe.redirectToCheckout({
+        sessionId: session.sessionId,
+      });
+
+      if (error) {
+        console.error('Error redirecting to Checkout:', error.message);
+      }
+    } catch (error) {
+      console.error('Error during checkout:', error.message);
+      // Handle error (e.g., display error message to user)
+    }
   };
 
   return (
