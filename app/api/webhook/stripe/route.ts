@@ -5,11 +5,11 @@ import { createOrder } from '@/lib/actions/order.actions';
 
 const stripe = new Stripe(process.env.NEXT_PUBLIC_STRIPE_SECRET_KEY!);
 
-export const config = {
-  api: {
-    bodyParser: false,
-  },
-};
+// export const config = {
+//   api: {
+//     bodyParser: false,
+//   },
+// };
 
 export default async function handler(
   req: NextApiRequest,
