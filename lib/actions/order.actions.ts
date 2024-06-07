@@ -16,7 +16,7 @@ import { ObjectId } from 'mongodb';
 import User from '../database/models/user.model';
 
 export const checkoutOrder = async (order: CheckoutOrderParams) => {
-  const stripe = new Stripe(process.env.NEXT_PUBLIC_STRIPE_SECRET_KEY!);
+  const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
 
   const price = order.isFree ? 0 : Number(order.price) * 100;
 
@@ -58,6 +58,7 @@ export const createOrder = async (order: CreateOrderParams) => {
       event: order.eventId,
       buyer: order.buyerId,
     });
+
     return JSON.parse(JSON.stringify(newOrder));
   } catch (error) {
     handleError(error);
