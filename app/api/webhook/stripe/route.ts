@@ -1,59 +1,39 @@
-import { NextApiRequest, NextApiResponse } from 'next';
-import Stripe from 'stripe';
-import { buffer } from 'micro';
+import stripe from 'stripe';
+import { NextResponse } from 'next/server';
 import { createOrder } from '@/lib/actions/order.actions';
 
-const stripe = new Stripe(process.env.NEXT_PUBLIC_STRIPE_SECRET_KEY!);
+export async function POST(request: Request) {
+  const body = await request.text();
 
-const handler = async (req: NextApiRequest, res: NextApiResponse) => {
-  if (req.method === 'POST') {
-    const buf = await buffer(req);
-    const sig = req.headers['stripe-signature'] as string;
-    const endpointSecret = process.env.STRIPE_WEBHOOK_SECRET!;
+  const sig = request.headers.get('stripe-signature') as string;
+  const endpointSecret = process.env.STRIPE_WEBHOOK_SECRET!;
 
-    let event: Stripe.Event;
+  let event;
 
-    try {
-      event = stripe.webhooks.constructEvent(buf, sig, endpointSecret);
-      console.log('Event:', event);
-    } catch (err) {
-      const errorMessage = err instanceof Error ? err.message : 'Unknown error';
-      res.status(400).send(`Webhook error: ${errorMessage}`);
-      return;
-    }
-
-    if (event.type === 'checkout.session.completed') {
-      const session = event.data.object as Stripe.Checkout.Session;
-
-      const order = {
-        stripeId: session.id,
-        eventId: session.metadata?.eventId || '',
-        buyerId: session.metadata?.buyerId || '',
-        totalAmount: session.amount_total
-          ? (session.amount_total / 100).toString()
-          : '0',
-        createdAt: new Date(),
-      };
-
-      try {
-        const newOrder = await createOrder(order);
-        res
-          .status(200)
-          .json({ message: 'Order created successfully', order: newOrder });
-      } catch (error) {
-        const errorMessage =
-          error instanceof Error ? error.message : 'Unknown error';
-        res
-          .status(500)
-          .json({ message: 'Error creating order', error: errorMessage });
-      }
-    } else {
-      res.status(200).send('Received unknown event type');
-    }
-  } else {
-    res.setHeader('Allow', 'POST');
-    res.status(405).end('Method Not Allowed');
+  try {
+    event = stripe.webhooks.constructEvent(body, sig, endpointSecret);
+  } catch (err) {
+    return NextResponse.json({ message: 'Webhook error', error: err });
   }
-};
 
-export default handler;
+  // Get the ID and type
+  const eventType = event.type;
+
+  // CREATE
+  if (eventType === 'checkout.session.completed') {
+    const { id, amount_total, metadata } = event.data.object;
+
+    const order = {
+      stripeId: id,
+      eventId: metadata?.eventId || '',
+      buyerId: metadata?.buyerId || '',
+      totalAmount: amount_total ? (amount_total / 100).toString() : '0',
+      createdAt: new Date(),
+    };
+
+    const newOrder = await createOrder(order);
+    return NextResponse.json({ message: 'OK', order: newOrder });
+  }
+
+  return new Response('', { status: 200 });
+}
