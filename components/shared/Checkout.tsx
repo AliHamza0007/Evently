@@ -56,7 +56,7 @@ const Checkout = ({ event, userId }: { event: any; userId: string }) => {
         console.error('Error redirecting to Checkout:', error.message);
       }
     } catch (error) {
-      console.error('Error during checkout:', error.message);
+      console.error('Error during checkout:');
       // Handle error (e.g., display error message to user)
     }
   };
