@@ -134,7 +134,10 @@ npm start
 
 ### Project Showcase Video
 
-[![Video Thumbnail](https://github.com/AliHamza0007/Evently/blob/main/ShowCase/2.png)](https://github.com/AliHamza0007/Evently/blob/main/vedio.html)
+<video controls>
+  <source src="./ShowCase/recording.mp4" type="video/x-matroska">
+  Your browser does not support the video tag or the file format.
+</video>
 
 ### Project Images
 
