@@ -32,7 +32,6 @@ Welcome to Evently! This application is designed to make event management simple
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 ![Stripe](https://img.shields.io/badge/Stripe-008CDD?style=for-the-badge&logo=stripe&logoColor=white)
-![Zod](https://img.shields.io/badge/Zod-3178C6?style=for-the-badge&logo=zod&logoColor=white)
 ![React Hook Form](https://img.shields.io/badge/React_Hook_Form-EC5990?style=for-the-badge&logo=react-hook-form&logoColor=white)
 ![Shadcn](https://img.shields.io/badge/Shadcn-61DAFB?style=for-the-badge&logo=react&logoColor=white)
 ![uploadthing](https://img.shields.io/badge/uploadthing-555?style=for-the-badge&logo=uploadthing&logoColor=white)
@@ -135,9 +134,7 @@ npm start
 ### Project Showcase Video
 
 - [Download recording.mp4](./ShowCase/recording.mp4)
-https://github.com/AliHamza0007/Evently/assets/141808379/036999e9-a5c3-4591-a23f-dae36ae9f97a
-
-
+  https://github.com/AliHamza0007/Evently/assets/141808379/036999e9-a5c3-4591-a23f-dae36ae9f97a
 
 ### Project Images
 
