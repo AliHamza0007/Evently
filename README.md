@@ -1,6 +1,6 @@
 live link=>https://evently007.netlify.app/
 
-<div class="video-container">
+<div class="video-container h-[500px]">
     <video src="./ShowCase/recording.mkv" controls="controls"></video>
 </div>
 <div class="d-flex gap-2" >
