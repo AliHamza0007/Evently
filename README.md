@@ -134,6 +134,7 @@ npm start
 ### Project Showcase Video
 
 - [Download recording.mp4](./ShowCase/recording.mp4)
+
   https://github.com/AliHamza0007/Evently/assets/141808379/036999e9-a5c3-4591-a23f-dae36ae9f97a
 
 ### Project Images
