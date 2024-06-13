@@ -1,5 +1,11 @@
 live link=>https://evently007.netlify.app/
 
+<div class=""
+>
+
+<vedio src="./ShowCase/recording.mkv" control="auto"></vedio>
+
+</div>
 <div class="d-flex gap-2" >
 <img src="./ShowCase/2.png"  width="19%" height="400px" />
 <img src="./ShowCase/3.png"  width="19%" height="400px" />
