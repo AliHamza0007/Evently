@@ -134,6 +134,8 @@ npm start
 
 ### Project Showcase Video
 
+[![Video Thumbnail](./ShowCase/1.png)](./ShowCase/recording.mkv)
+
 <video controls>
   <source src="./ShowCase/recording.mkv" type="video/x-matroska">
   Your browser does not support the video tag or the file format.
