@@ -1,15 +1,17 @@
 live link=>https://evently007.netlify.app/
 
-<div class="video-container h-[500px]">
-    <video src="./ShowCase/recording.mkv" controls="controls"></video>
+<div class="video-container" style="height: 500px;">
+    <video src="./ShowCase/recording.mkv" controls style="width: 100%; height: 100%;"></video>
 </div>
-<div class="d-flex gap-2" >
-<img src="./ShowCase/2.png"  width="19%" height="400px" />
-<img src="./ShowCase/3.png"  width="19%" height="400px" />
-<img src="./ShowCase/4.png"  width="19%" height="400px" />
-<img src="./ShowCase/1.png"  width="19%" height="400px" />
-<img src="./ShowCase/5.png"  width="19%" height="400px" />
 
+**Project Images:**
+
+<div class="d-flex" style="display: flex; gap: 2%;">
+    <img src="./ShowCase/2.png" style="width: 19%; height: 400px;" />
+    <img src="./ShowCase/3.png" style="width: 19%; height: 400px;" />
+    <img src="./ShowCase/4.png" style="width: 19%; height: 400px;" />
+    <img src="./ShowCase/1.png" style="width: 19%; height: 400px;" />
+    <img src="./ShowCase/5.png" style="width: 19%; height: 400px;" />
 </div>
 
 ## 📋 <a name="table">Table of Contents</a>
