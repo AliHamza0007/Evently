@@ -135,7 +135,7 @@ npm start
 ### Project Showcase Video
 
 <video controls>
-  <source src="./ShowCase/recording.mp4" type="video/x-matroska">
+  <source src="./ShowCase/recording.mp4" type="video/mp4">
   Your browser does not support the video tag or the file format.
 </video>
 
