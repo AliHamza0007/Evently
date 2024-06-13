@@ -134,10 +134,7 @@ npm start
 
 ### Project Showcase Video
 
-<video controls>
-  <source src="./ShowCase/recording.mp4" type="video/mp4">
-  Your browser does not support the video tag or the file format.
-</video>
+- [Download recording.mp4](./ShowCase/recording.mp4)
 
 ### Project Images
 
