@@ -134,20 +134,7 @@ npm start
 
 ### Project Showcase Video
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Player</title>
-</head>
-<body>
-    <video controls>
-        <source src="videos/recording.mkv" type="video/x-matroska">
-        Your browser does not support the video tag.
-    </video>
-</body>
-</html>
+[![Video Thumbnail](https://github.com/AliHamza0007/Evently/blob/main/ShowCase/2.png)](https://github.com/AliHamza0007/Evently/blob/main/vedio.html)
 
 ### Project Images
 
