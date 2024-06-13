@@ -1,34 +1,35 @@
-live link=>https://evently007.netlify.app/
+Sure! I'll make your README more professional and visually appealing by adding icons, tags, and formatting improvements. Here's an enhanced version:
 
-<div class="video-container" style="height: 500px;">
-    <video src="./ShowCase/recording.mkv" controls style="width: 100%; height: 100%;"></video>
-</div>
+````markdown
+# 🌟 Evently
 
-**Project Images:**
+![Live](https://img.shields.io/badge/Live-Link-blue) [Evently](https://evently007.netlify.app/)
 
-<div class="d-flex" style="display: flex; gap: 2%;">
-    <img src="./ShowCase/2.png" style="width: 19%; height: 400px;" />
-    <img src="./ShowCase/3.png" style="width: 19%; height: 400px;" />
-    <img src="./ShowCase/4.png" style="width: 19%; height: 400px;" />
-    <img src="./ShowCase/1.png" style="width: 19%; height: 400px;" />
-    <img src="./ShowCase/5.png" style="width: 19%; height: 400px;" />
-</div>
-
-## 📋 <a name="table">Table of Contents</a>
-
-1. 🤖 [Introduction](#introduction)
-2. ⚙️ [Tech Stack](#tech-stack)
-3. 🔋 [Features](#features)
-4. 🤸 [Quick Start](#quick-start)
-5. 🕸️ [Snippets](#snippets)
-6. 🔗 [Links](#links)
-7. 🚀 [More](#more)
-
-Built on Next.js 14, the events application stands as a comprehensive, full-stack platform for managing events. It serves as a hub, spotlighting diverse events taking place globally. Featuring seamless payment processing through Stripe, you have the capability to purchase tickets for any event or even initiate and manage your own events.
+Built on Next.js 14, Evently is a comprehensive, full-stack platform for managing events. It serves as a hub, spotlighting diverse events taking place globally. Featuring seamless payment processing through Stripe, you have the capability to purchase tickets for any event or even initiate and manage your own events.
 
 If you're getting started and need assistance or face any bugs, join our active Discord community with over 27k+ members. It's a place where people help each other out.
 
-## <a name="tech-stack">⚙️ Tech Stack</a>
+---
+
+## 📋 Table of Contents
+
+1. [🤖 Introduction](#introduction)
+2. [⚙️ Tech Stack](#tech-stack)
+3. [🔋 Features](#features)
+4. [🤸 Quick Start](#quick-start)
+5. [🕸️ Snippets](#snippets)
+6. [🔗 Links](#links)
+7. [🚀 More](#more)
+
+---
+
+## 🤖 Introduction
+
+Welcome to Evently! This application is designed to make event management simple and efficient. Whether you're looking to organize an event or find exciting events to attend, Evently has got you covered.
+
+---
+
+## ⚙️ Tech Stack
 
 - Node.js
 - Next.js
@@ -40,7 +41,9 @@ If you're getting started and need assistance or face any bugs, join our active 
 - Shadcn
 - uploadthing
 
-## <a name="features">🔋 Features</a>
+---
+
+## 🔋 Features
 
 👉 **Authentication (CRUD) with Clerk:** User management through Clerk, ensuring secure and efficient authentication.
 
@@ -51,9 +54,9 @@ If you're getting started and need assistance or face any bugs, join our active 
 - **Update Events:** Empowering users to modify event details dynamically, ensuring that event information remains accurate and up-to-date.
 - **Delete Events:** A straightforward process for removing events from the system, giving administrators the ability to manage and curate the platform effectively.
 
-👉 **Related Events:** Smartly connects events that are related and displaying on the event details page, making it more engaging for users
+👉 **Related Events:** Smartly connects events that are related and displaying on the event details page, making it more engaging for users.
 
-👉 **Organized Events:** Efficient organization of events, ensuring a structured and user-friendly display for the audience, i.e., showing events created by the user on the user profile
+👉 **Organized Events:** Efficient organization of events, ensuring a structured and user-friendly display for the audience, i.e., showing events created by the user on the user profile.
 
 👉 **Search & Filter:** Empowering users with a robust search and filter system, enabling them to easily find the events that match their preferences.
 
@@ -65,9 +68,11 @@ If you're getting started and need assistance or face any bugs, join our active 
 
 👉 **Search Orders:** Quick and efficient search functionality for orders, facilitating easy tracking and management.
 
-and many more, including code architecture and reusability
+... and many more features including code architecture and reusability.
 
-## <a name="quick-start">🤸 Quick Start</a>
+---
+
+## 🤸 Quick Start
 
 Follow these steps to set up the project locally on your machine.
 
@@ -85,6 +90,7 @@ Make sure you have the following installed on your machine:
 git clone https://github.com/your-username/your-project.git
 cd your-project
 ```
+````
 
 **Installation**
 
@@ -125,10 +131,54 @@ STRIPE_WEBHOOK_SECRET=
 NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=
 ```
 
-Replace the placeholder values with your actual credentials
+Replace the placeholder values with your actual credentials.
 
 **Running the Project**
 
 ```bash
 npm start
+```
+
+---
+
+## 🕸️ Snippets
+
+Here is an example of how to use the components:
+
+```html
+<div class="video-container" style="height: 500px;">
+  <video
+    src="./ShowCase/recording.mkv"
+    controls
+    style="width: 100%; height: 100%;"
+  ></video>
+</div>
+
+**Project Images:**
+
+<div class="d-flex" style="display: flex; gap: 2%;">
+  <img src="./ShowCase/2.png" style="width: 19%; height: 400px;" />
+  <img src="./ShowCase/3.png" style="width: 19%; height: 400px;" />
+  <img src="./ShowCase/4.png" style="width: 19%; height: 400px;" />
+  <img src="./ShowCase/1.png" style="width: 19%; height: 400px;" />
+  <img src="./ShowCase/5.png" style="width: 19%; height: 400px;" />
+</div>
+```
+
+---
+
+## 🔗 Links
+
+- [Live Project](https://evently007.netlify.app/)
+- [GitHub Repository](https://github.com/your-username/your-project)
+
+---
+
+## 🚀 More
+
+For more information, visit our [documentation](#).
+
+```
+
+This version includes improved formatting, icons, and a more organized structure to make your README more professional and visually appealing. Make sure to replace placeholders with actual links and content where necessary.
 ```
