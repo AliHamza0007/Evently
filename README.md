@@ -1,13 +1,13 @@
-Got it! Let's enhance the README with more visuals, better formatting, and ensure the video and images are displayed correctly. Here's an updated and more attractive version:
+Understood. Let's enhance the appearance of the README with a better layout, colors, and proper embedding of links and media. Here's a revised version that aims to be more visually appealing and professional:
 
 ````markdown
 # 🎉 Evently
 
-![Live](https://img.shields.io/badge/Live-Link-blue?style=for-the-badge&logo=netlify) [Evently](https://evently007.netlify.app/)
+[![Live](https://img.shields.io/badge/Live-Link-blue?style=for-the-badge&logo=netlify)](https://evently007.netlify.app/)
 
 Evently is a comprehensive, full-stack platform for managing events, built on Next.js 14. It serves as a hub, spotlighting diverse events taking place globally. Featuring seamless payment processing through Stripe, you have the capability to purchase tickets for any event or even initiate and manage your own events.
 
-Join our active [Discord community](#) with over 27k+ members if you need assistance or face any bugs. It's a place where people help each other out.
+Join our active Discord community with over 27k+ members if you need assistance or face any bugs. It's a place where people help each other out.
 
 ---
 
@@ -30,15 +30,15 @@ Welcome to Evently! This application is designed to make event management simple
 
 ## ⚙️ Tech Stack
 
-- ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)
-- ![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)
-- ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
-- ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
-- ![Stripe](https://img.shields.io/badge/Stripe-008CDD?style=for-the-badge&logo=stripe&logoColor=white)
-- ![Zod](https://img.shields.io/badge/Zod-3178C6?style=for-the-badge&logo=zod&logoColor=white)
-- ![React Hook Form](https://img.shields.io/badge/React_Hook_Form-EC5990?style=for-the-badge&logo=react-hook-form&logoColor=white)
-- ![Shadcn](https://img.shields.io/badge/Shadcn-61DAFB?style=for-the-badge&logo=shadcn&logoColor=white)
-- ![uploadthing](https://img.shields.io/badge/uploadthing-555?style=for-the-badge&logo=uploadthing&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Stripe](https://img.shields.io/badge/Stripe-008CDD?style=for-the-badge&logo=stripe&logoColor=white)
+![Zod](https://img.shields.io/badge/Zod-3178C6?style=for-the-badge&logo=zod&logoColor=white)
+![React Hook Form](https://img.shields.io/badge/React_Hook_Form-EC5990?style=for-the-badge&logo=react-hook-form&logoColor=white)
+![Shadcn](https://img.shields.io/badge/Shadcn-61DAFB?style=for-the-badge&logo=react&logoColor=white)
+![uploadthing](https://img.shields.io/badge/uploadthing-555?style=for-the-badge&logo=uploadthing&logoColor=white)
 
 ---
 
@@ -129,21 +129,19 @@ npm start
 
 ## 🎬 Showcase
 
-**Project Showcase Video:**
+### Project Showcase Video
 
-<div style="height: 500px;">
-    <video src="./ShowCase/recording.mkv" controls style="width: 100%; height: 100%;"></video>
-</div>
+![Recording](./ShowCase/recording.png)
 
-**Project Images:**
+[Watch Video](./ShowCase/recording.mkv)
 
-<div style="display: flex; gap: 10px; justify-content: center;">
-    <img src="./ShowCase/2.png" style="width: 19%; height: 400px;" />
-    <img src="./ShowCase/3.png" style="width: 19%; height: 400px;" />
-    <img src="./ShowCase/4.png" style="width: 19%; height: 400px;" />
-    <img src="./ShowCase/1.png" style="width: 19%; height: 400px;" />
-    <img src="./ShowCase/5.png" style="width: 19%; height: 400px;" />
-</div>
+### Project Images
+
+![Project Image 1](./ShowCase/2.png)
+![Project Image 2](./ShowCase/3.png)
+![Project Image 3](./ShowCase/4.png)
+![Project Image 4](./ShowCase/1.png)
+![Project Image 5](./ShowCase/5.png)
 
 ---
 
@@ -156,4 +154,19 @@ npm start
 
 ## 🚀 More
 
-contribute is free of cost and open source
+For more information, visit our [documentation](#).
+
+```
+
+### Key Enhancements:
+1. **Visual Appeal:** Used badges and colorful icons for a more engaging appearance.
+2. **Media Embedding:** Replaced the video tag with an image placeholder linking to the video file and directly embedded images using Markdown syntax.
+3. **Consistent Styling:** Ensured consistent styling with proper use of headings and sections.
+
+### Further Customization:
+1. **Markdown Badges:** Ensure the badge URLs point to valid resources.
+2. **Images and Video Links:** Check paths to images and video to ensure they load correctly from your repository.
+3. **Styling and Color:** Adjust colors and icons to match your project's theme.
+
+Feel free to replace placeholders with actual URLs and adjust styles to better match your needs.
+```
